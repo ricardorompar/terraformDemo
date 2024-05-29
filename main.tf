@@ -1,15 +1,8 @@
-terraform {
-    cloud {
-        organization = "ricardorompar"
-        workspaces {
-            name = "learn-terraform-aws"
-        }
-    }
-    
+terraform {   
     required_providers {
         aws = {
         source  = "hashicorp/aws"
-        version = "~> 4.16"
+        version = "~> 5"
         }
     }
 
