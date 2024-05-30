@@ -50,6 +50,7 @@ resource "aws_instance" "app_server" {
             <body>
                 <h1>Hello from ${var.instance_name} in AWS!!</h1>
                 <div>This is an example EC2 server in ${var.ec2_region} deployed with Terraform.</div>
+                <div><b>ACME Corp.</b></div>
             </body>
         </html>" > /var/www/html/index.html
 
