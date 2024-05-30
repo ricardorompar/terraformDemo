@@ -1,4 +1,11 @@
 terraform {   
+    cloud {
+        organization = "acme-corp-demo-rr"
+        workspaces {
+            name = "terraform-demo"
+        }
+    }
+
     required_providers {
         aws = {
             source  = "hashicorp/aws"
