@@ -40,9 +40,9 @@ resource "google_compute_instance" "app_server" {
         startup_script = <<-EOL
             #!/bin/bash
             # Update the package repository
-            apt-get update -y
+            sudo apt-get update -y
 
-            apt-get install -y nginx
+            sudo apt-get install -y nginx
 
             # Create a simple HTML page with the instance name:
             echo "<html>
@@ -57,8 +57,8 @@ resource "google_compute_instance" "app_server" {
             </html>" > /var/www/html/index.html
 
             # Start NGINX and enable it to start on boot
-            systemctl start nginx
-            systemctl enable nginx
+            sudo systemctl start nginx
+            sudo systemctl enable nginx
         EOL
     }
 }
